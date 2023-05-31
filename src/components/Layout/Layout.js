@@ -3,9 +3,9 @@ import NavBar from './NavBar'
 
 
 function Layout(props){
-    return <div>
+    return <div className={classes.main}>
         <NavBar/>
-        <main className={classes.main}>
+        <main >
             {props.children}
         </main>
         
