@@ -18,7 +18,7 @@ function ColorSchemesExample() {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="black" variant="dark" >
         <Container>
           <Navbar.Brand href="/" onClick={() => handleNavItemClick('/')}>
           <img className={classes.logo} src={logo} alt="" />
@@ -27,17 +27,14 @@ function ColorSchemesExample() {
             <Nav.Link eventKey="#home" onClick={() => handleNavItemClick('#home')}>
               La Aplicación
             </Nav.Link>
-            <Nav.Link href="quienes-somos" onClick={() => handleNavItemClick('quienes-somos')}>
-              Quiénes Somos
-            </Nav.Link>
-            <Nav.Link href="FAQs" onClick={() => handleNavItemClick('FAQs')}>
+            <Nav.Link href="faqs" onClick={() => handleNavItemClick('faqs')}>
               FAQs
             </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
       <Navbar
-        bg="dark"
+        bg="black"
         variant="dark"
         className={showSubNavbar ? classes.showNavbar : classes.hideNavbar}
       >

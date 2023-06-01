@@ -1,8 +1,8 @@
 import classes from './Home.module.css'
 
 function Home(props){
-    return <div>
-   
+    return <div id='/'>
+   Home
         
     </div>
 }
