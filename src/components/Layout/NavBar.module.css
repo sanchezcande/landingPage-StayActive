@@ -1,25 +1,32 @@
 .navBaja {
-    margin-top: -25px;
-    margin-left: 25px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
 
-  }
-  
-  .showNavbar {
-    opacity: 1;
-    max-height: 100px;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+.showNavbar {
+  opacity: 1;
+  max-height: 1000px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
 
-  }
-  
-  .hideNavbar {
-    opacity: 0;
-    max-height: 0;
-    transition: opacity 0.5s ease, max-height 0.5s ease;
-    
-  }
-  
+.hideNavbar {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.logo {
+  width: 80px;
+  margin-left: -70px;
+}
+
+@media (max-width: 768px) {
   .logo {
-    width: 80px;
-    margin-left: -70px;
+    margin-left: 0;
   }
   
+  .navBaja {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}

@@ -1,4 +1,6 @@
 import classes from './Clubes.module.css'
+import React from 'react';
+
 
 
 function Clubes() {

@@ -2,40 +2,36 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import classes from './NavBar.module.css'; 
-import logo from './Logo.png'
+import classes from './NavBar.module.css';
+import logo from './Logo.png';
 
 function ColorSchemesExample() {
   const [showSubNavbar, setShowSubNavbar] = useState(false);
 
-  const handleNavItemClick = (href) => {
-    if (href === '#home') {
-      setShowSubNavbar(true);
-    } else {
-      setShowSubNavbar(false);
-    }
+  const handleNavItemClick = () => {
+    setShowSubNavbar((prevShowSubNavbar) => !prevShowSubNavbar);
   };
 
   return (
     <>
-      <Navbar bg="black" variant="dark" >
+      <Navbar bg="black" variant="dark" expand="md">
         <Container>
-          <Navbar.Brand href="/" onClick={() => handleNavItemClick('/')}>
-          <img className={classes.logo} src={logo} alt="" />
+          <Navbar.Brand href="/" onClick={handleNavItemClick}>
+            <img className={classes.logo} src={logo} alt="" />
           </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link eventKey="#home" onClick={() => handleNavItemClick('#home')}>
-              La Aplicación
-            </Nav.Link>
-            <Nav.Link href="faqs" onClick={() => handleNavItemClick('faqs')}>
-              FAQs
-            </Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link onClick={handleNavItemClick}>La Aplicación</Nav.Link>
+              <Nav.Link href="faqs">FAQs</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
       <Navbar
         bg="black"
         variant="dark"
+        expand="md"
         className={showSubNavbar ? classes.showNavbar : classes.hideNavbar}
       >
         <Container>

@@ -7,13 +7,13 @@ import { BrowserRouter } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container); 
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
+  container
 );
 
 reportWebVitals();
